@@ -29,26 +29,32 @@ footer, header, hgroup, menu, nav, section {
     box-sizing: border-box;
     background-color: #EEF6FA;
 }
-body{
-    width: 80%;
-    padding: 0 auto;
-}
+
 h1{
     text-align: center;
-    height: 10rem;
+    height: 6rem;
     font-family: 'Merienda One', cursive;;
     font-size: 4rem;
     padding-top: 0.5%;
 }
+
+h2{
+    text-align: center;
+    font-family: 'Merienda One', cursive;
+    font-size: 2rem;
+    padding-top: 0.5%;    
+}
+
 nav{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-left: 20rem;
     height: 5rem;
     align-items: baseline;
     text-decoration: none;
     text-align: center;
+    width: auto;
+    border-bottom: black solid 1px;
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 
 a{
@@ -58,7 +64,7 @@ a{
 }
 
 #home{
-    background-color: #D7EAF4;
+    /* background-color: #D7EAF4; */
     text-align: center;
     height: 4rem;
     width: 5rem;
@@ -97,6 +103,10 @@ a{
     font-family: 'Source Code Pro', monospace;
 }
 
+#home:hover{
+    background-color: #D7EAF4;
+}
+
 #projects:hover{
     background-color: #D7EAF4;
 }
@@ -112,17 +122,32 @@ contact:hover{
 }
 
 /*=======================================index.html css section ================================*/
+#introbox{
+    display: flex;
+    justify-content: center;
+}
+
+#aboutbox{
+    display: flex;
+    justify-content: center;
+}
+
+#contactbox{
+    display: flex;
+    justify-content: center;
+}
 
 #intro{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 0 auto;
-    padding-left: 20rem;
+    width: 70%;
 }
 
 img{
     height: 35rem;
-    border-radius: 5%;    
+    border-radius: 5%;  
+    margin: 2rem;  
 }
 #text{
     display: flex;
@@ -132,18 +157,102 @@ img{
     padding-top: 5rem;
 }
 
-h2{
+#hello{
     text-align: center;
     font-family: 'Pacifico', cursive;
     font-size: 4rem;
 }
-#main_text{
+#main_text, #emailtext, #socials{
     padding: 4%;
     text-align: justify;
     font-family: 'Source Code Pro', monospace;
 }
 
+#projectbox{
+    display: flex;
+    justify-content: center;
+}
 
+#project{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 auto;
+    width: 70%;
+}
+
+#p_box{
+    display: flex;
+    justify-content: center;
+}
+#p_box2{
+    width: 70%;
+    margin: 1rem;
+}
+
+#p_title{
+    font-family: 'Merienda One', cursive;
+    font-size: 2.5rem;
+    text-align: left;
+    width: 70%;
+}
+
+#a_title{
+    font-family: 'Merienda One', cursive;
+    font-size: 2.5rem;
+    text-align: right;
+    width: 100%;
+}
+
+#project{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#container1, #container2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 38rem;
+    border: dashed black 0.5px;
+}
+
+#cupcakes, #yosemite, #planing, #working{
+    width: 32rem;
+    height: 20rem;
+    margin: 2%;
+    align-self: center;
+}
+
+#text1, #text2, #text3{
+    padding: 2%;
+    font-family: 'Source Code Pro', monospace;
+    text-align: justify;
+}
+
+#container3{
+    display: flex;
+    flex-direction: column;
+    border: dashed black 0.5px;
+    width: 80rem;
+    margin: 1rem;
+}
+
+#img_container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#hiking{
+    width: 50%;
+    height: 80%;
+}
+
+#about_text{
+    padding: 4%;
+    text-align: justify;
+    font-family: 'Source Code Pro', monospace;
+}
 /*================================================= index.html css section end ======================================*/
 
 footer{
@@ -159,4 +268,78 @@ i{
 
 a {
     color: black;
+}
+
+@media (max-width: 800px){
+    #me{
+        width: 25rem;
+        height: 32rem;
+        margin: 2%;
+        align-self: center;
+    }
+    #intro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+    }
+    #text{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        padding-top: 2rem;
+    }
+
+    #container1, #container2{
+        margin: 2rem 0;
+    }
+
+    #img_container{
+        display: flex;
+        flex-direction: column;
+    }
+    #hiking{
+        width: 32rem;
+        height: 25rem;
+        margin: 2%;
+        align-self: center;
+    }
+
+}
+
+
+@media (max-width: 500px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        height: 10rem;
+        padding-left: 42%;
+        padding-bottom: 0.5rem;
+    }
+ 
+    #home, #about, #projects, #contact{
+        padding: 0;
+        height: 2.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    #cupcakes, #yosemite, #planing, #working, #hiking{
+        width: 25rem;
+        height: 18rem;
+        margin: 2%;
+        align-self: center;
+    }
+
+    #about_box{
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+    }
+    #container1,#container2,#container3{
+        border: none;
+    }
+
 }
